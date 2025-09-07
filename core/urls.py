@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import PingingView
+from .views import *
 
 
 urlpatterns = [
-    path('ping/', PingingView.as_view(), name='ping'),
+    path('create-product/', CreateProductView.as_view(), name='create-product'),
+    path('list-products/', ListProductAPIView.as_view(), name='list-products'),
 ]
